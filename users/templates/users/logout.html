@@ -1,0 +1,11 @@
+
+{% extends "core/layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="login-content-section">
+        <div class="login-content">
+               <h1>Your are currently logged out!! <a href="{%url 'login'%}">login again?</a></h1>
+        </div> 
+    </div>
+</div>
+{% endblock content%}

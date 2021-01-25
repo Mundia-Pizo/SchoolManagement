@@ -2,13 +2,21 @@
     <div class="container">
         <div class="nav-layout">
             <div>
-                <a href="{% url 'home'%}"><h1>Presta Colledge</h1></a>
+                <a href="{% url 'home'%}"><h1>Presta Colledge</h1></a><span>
+                    {%if user.is_authenticated%}
+                    <small>{{user.username}}</small>
+                    {%endif%}
+                </span> 
             </div>
-            <ul>
+            <ul> 
                 <a href="{% url 'home'%}"><li>Home</li></a>
                 <a href="http://"><li>Learn</li></a>
+                {%if user.is_authenticated%}
+                <a href="{%url 'logout'%}"><li>logout </li></a>
+                {%else%}
                 <a href="{%url 'register'%}"><li>Sign up </li></a>
                 <a href="{%url 'login'%}"> <li>Sign in </li></a>
+                {%endif%}
                
             </ul>
         </div>
