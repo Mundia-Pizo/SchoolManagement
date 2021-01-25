@@ -1,0 +1,154 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.nav-layout,nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+}
+nav h1{
+    margin-top: 35px;
+}
+nav ul li{
+    padding: 0 20px 0 20px;
+    margin-top: 40px;
+}
+
+nav{
+    background-color: lightgray;
+    height: 100px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+.hero{
+    margin-top: 0px;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    /* position: absolute; */
+}
+.service-section{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+#service-h1{
+    text-align: center;
+}
+.service{
+    min-width: 200px;
+    max-width: 300px;
+    margin-top: 20px;
+}
+.service img{
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+footer{
+    margin-bottom: 75px;
+    margin-top: 40px;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .container h2{
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+footer ul li, .footer-content h2{
+    text-align: center;
+}
+
+.icon{
+    width: 60px;
+    height: auto;
+}
+
+.social-connect{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.icon-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.icon-section img{
+    margin: auto;
+    object-fit: cover;
+}
+
+.login-content-section{
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    background-color: lightsteelblue;
+    padding: 50px 25px 50px 25px;
+    
+}
+tr{
+    height: 20px;
+}
+table input, table label{
+    padding:5px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+.form-legend{
+    margin-bottom: 20px;
+    margin:auto;
+    color: blue;
+}
+form button{
+    padding: 10px 10px 5px 10px;
+    background-color:limegreen;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    width: 80px;
+}
+.error{
+    color: red;
+}
+form, error-legend{
+    width: 60%;
+    margin: auto;
+    align-content: center;
+}
+form span{
+    margin-left: 20px;
+}
+.login-content{
+    width: 60%;
+    margin: auto;
+
+}
+@media(width:760px){
+    .social-connect{
+        width: 90%;
+    }
+}
+
