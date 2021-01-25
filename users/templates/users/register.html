@@ -1,37 +1,46 @@
+
 {% extends "core/layout.html" %}
 {% block content %}
 <div class="container">
     <div class="login-content-section">
-        <h1>Login Here</h1>
-    {% if form.errors %}
-    <p class="error">Your username and password didn't match. Please try again.</p>
-    {% endif %}
+        <div class="login-content">
+                <h1 class="form-legend">Register</h1>
+                {% if form.errors %}
+                <p class="error">Your username and password didn't match. Please try again.</p>
+                {% endif %}
 
-    {% if next %}
-        {% if user.is_authenticated %}
-        <p>Your account doesn't have access to this page. To proceed,
-        please login with an account that has access.</p>
-        {% else %}
-        <p>Please login to see this page.</p>
-        {% endif %}
-    {% endif %}
-
-    <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-        <tr>
-            <td>{{ form.username.label_tag }}</td>
-            <td>{{ form.username }}</td>
-        </tr>
-        <tr>
-            <td>{{ form.password.label_tag }}</td>
-            <td>{{ form.password }}</td>
-        </tr>
-    </table>
-
-    <input type="submit" value="login">
-    <input type="hidden" name="next" value="{{ next }}">
-    </form>
+                {% if next %}
+                    {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                    {% else %}
+                    <p>Please login to see this page.</p>
+                    {% endif %}
+                {% endif %}
+        </div>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.username.label_tag }}</td>
+                    <td>{{ form.username }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.email.label_tag }}</td>
+                    <td>{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.password1.label_tag }}</td>
+                    <td>{{ form.password1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.password2.label_tag }}</td>
+                    <td>{{ form.password2 }}</td>
+                </tr>
+            </table>
+            <button type="submit">Sign up</button> <span>Already have an account"? <a href="{%url 'login'%}">login</a> </span>
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
 
     </div>
 </div>
