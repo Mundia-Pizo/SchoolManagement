@@ -3,6 +3,7 @@
     padding: 0px;
     list-style: none;
     text-decoration: none;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
@@ -146,9 +147,18 @@ form span{
     margin: auto;
 
 }
-@media(width:760px){
+@media(width:768px){
     .social-connect{
         width: 90%;
+    }
+    .login-content{
+        width: 100%;
+    
+    }
+    table input, table label{
+        padding:5px;
+        margin-bottom: 20px;
+        width: 150px;
     }
 }
 
